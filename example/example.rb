@@ -1,4 +1,4 @@
-require_relative '../lib/threadlock'
+require 'threadlock'
 
 class A
   
@@ -12,11 +12,14 @@ class A
     puts '   bar'
   end
   
-  # Make specific instance methods thread safe
+  # Make specific instance methods "thread safe"
   threadlock :foo, :bar
   
-  # Make all instance methods thread safe
-  # threadlock self.instance_methods
+  # Make all instance methods "thread safe"
+  # threadlock instance_methods
+  
+  # Make all non-inherited instance methods "thread safe"
+  # threadlock instance_methods-superclass.instance_methods
 end
 
 a = A.new
