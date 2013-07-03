@@ -20,6 +20,10 @@ class A
   
   # Make all non-inherited instance methods "thread safe"
   # threadlock instance_methods-superclass.instance_methods
+  
+  # Use user specified lock names
+  # threadlock :foo, lock: :@foolock
+  # threadlock :bar, lock: :@barlock
 end
 
 a = A.new

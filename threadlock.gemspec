@@ -1,8 +1,9 @@
 Gem::Specification.new do |s|
   s.name          = 'threadlock'
-  s.version       = '1.0.0'
+  s.version       = '1.1.0'
   s.date          = '2013-07-02'
-  s.summary       = "threadlock"
+  s.summary       = \
+    "threadlock: Easy, featherweight thread protection for basic ruby objects."
   s.description   = \
     "Use the threadlock function in your class definition to automatically run"\
     " instance methods inside of an instance-wide re-entrant lock (Monitor). "\
