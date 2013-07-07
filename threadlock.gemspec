@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name          = 'threadlock'
-  s.version       = '1.1.0'
-  s.date          = '2013-07-02'
+  s.version       = '1.2.0'
+  s.date          = '2013-07-07'
   s.summary       = \
     "threadlock: Easy, featherweight thread protection for basic ruby objects."
   s.description   = \

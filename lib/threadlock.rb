@@ -18,10 +18,10 @@ def threadlock(*funcs, lock: :@___threadlock___)
     class_eval\
     ("
       alias :#{f2} :#{f}
-      def #{f}(*args)
+      def #{f}(*args, &block)
         #{lock.to_s} ||= Monitor.new
         #{lock.to_s}.synchronize do
-          #{f2}(*args)
+          #{f2}(*args, &block)
         end
       end
     ")
