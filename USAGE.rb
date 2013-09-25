@@ -99,7 +99,7 @@ class Example6
     "bar"
   end
   
-  # Wrap new method bar in the same re-entrant lock
+  # Wrap method bar in the same re-entrant lock
   threadlock :bar
   
 end
