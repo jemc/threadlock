@@ -3,6 +3,7 @@ require 'threadlock'
 
 
 class Example1
+  include Threadlock
   
   def foo
     @foo = true
@@ -28,6 +29,7 @@ end
 
 
 class Example2
+  include Threadlock
   
   def foo
     @foo = true
@@ -52,6 +54,7 @@ end
 
 
 class Example3
+  include Threadlock
   
   def foo
     @foo = true
@@ -76,6 +79,7 @@ end
 
 
 class Example4
+  include Threadlock
   
   def foo
     @foo = true
@@ -101,6 +105,7 @@ end
 
 
 class Example5
+  include Threadlock
   
   def initialize
     @custom_lock_name = Mutex.new
@@ -129,6 +134,7 @@ end
 
 
 class Example6 # Ruby 2.1 only
+  include Threadlock
   
   # Ruby 2.1 only: wrap new method foo in a re-entrant lock
   threadlock def foo
