@@ -1,15 +1,17 @@
+
 Gem::Specification.new do |s|
   s.name          = 'threadlock'
-  s.version       = '1.3.2'
-  s.date          = '2013-10-06'
+  s.version       = '2.0.0'
+  s.date          = '2013-12-19'
   s.summary       = \
     "threadlock: Easy, featherweight thread protection for basic ruby objects."
   s.description   = \
-    "Use the threadlock function in your class definition to automatically run"\
+    "Use the threadlock method in your class definition to automatically run"\
     " instance methods inside of an instance-wide re-entrant lock (Monitor). "\
-    " All locked methods in an instance are protect by a single lock.  You can"\
-    " protect all or some of your methods from being run asynchronously.  In"\
-    " Ruby>=2.1, threadlock can also be syntactically used as a decorator. "
+    " All locked methods in an instance are protected by a single lock, unless"\
+    " a specific lock is specified. "\
+    " You can protect all or some of your methods from being run concurrently. "\
+    " In Ruby>=2.1, threadlock can also be used as a syntactic decorator. "\
     " \n Enjoy."
     
   s.authors       = ["Joe McIlvain"]
